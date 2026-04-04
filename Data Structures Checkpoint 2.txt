@@ -1,0 +1,48 @@
+# Question 1
+import math
+t=[12,8,4,2]
+answer=math.prod(t)
+print("My final answer: ",answer)
+
+
+# Question 2
+def sort_list_last(tuples):
+  return sorted(tuples, key=lambda x: x[-1])
+
+initial_list=[(5,15),(1,3),(4,9),(2,6),(7,12)]
+print("My final list: ",sort_list_last(initial_list))
+
+# Question 3
+from collections import Counter
+
+d1 = {'ii': 100, 'iv': 200, 'v': 300, 'iii': 200}
+d2 = {'ii': 300, 'v': 200, 'iv': 400, 'iii': 400}
+
+result = Counter(d1) + Counter(d2)  #Combine using counter
+
+print("My final dictionary: ",dict(result))
+
+# Question 4
+a = int(input("Enter a number: "))
+squares_dict = {i: i * i for i in range(1, a + 1)} #Generate dictionary
+print(squares_dict)
+
+# Question 5
+price = [('amount1', '2.50'), ('amount2', '5.75'), ('amount3', '7.25')]
+
+sorted_price = sorted(price, key=lambda x: float(x[1]), reverse=True) #Sort using lambda function to convert 2nd element to float
+
+print("My reversed prices: ",sorted_price) #reverse gives descending order
+
+# Question 6
+set = {3, 6, 9, 13}
+
+for i in set:    #iterate
+    print(i)
+
+set.add(15)
+print(set)
+
+set.remove(6) 
+print("My final set: ",set) 
+
